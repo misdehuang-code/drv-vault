@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}运行日志 · 驱匣抓取后台{% endblock %}
+{% block content %}
+<section class="panel">
+  <h2>运行日志</h2>
+  <div id="live-logs" class="logs" style="height:70vh">{{ logs|join('\n') }}</div>
+</section>
+{% endblock %}

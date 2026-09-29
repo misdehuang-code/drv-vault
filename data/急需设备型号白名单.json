@@ -1,0 +1,1443 @@
+{
+  "generated_at": "2026-09-29T03:57:17.352888+00:00",
+  "title": "急需设备型号白名单",
+  "sort_by": "value_score_desc",
+  "scoring_model": "commercial_v1",
+  "total_cleaned_posts": 63,
+  "eligible_posts": 63,
+  "discarded_posts": 0,
+  "total_models": 58,
+  "items": [
+    {
+      "device_category": "显卡",
+      "device_model": "NVIDIA CMP",
+      "value_score": 39.4,
+      "heat_score": 7.5,
+      "mention_count": 3,
+      "whitelist_hits": [
+        "pci",
+        "pcie",
+        "固件",
+        "firmware",
+        "bios",
+        "uefi",
+        "驱动",
+        "driver",
+        "主板",
+        "找不到驱动",
+        "下架",
+        "显卡"
+      ],
+      "pain_points": [
+        "官方驱动难寻或已下架"
+      ],
+      "error_codes": [
+        "0x88888888",
+        "0x00000000",
+        "0x00453D01",
+        "0x11010140",
+        "0x00001101",
+        "0x00200001",
+        "0x00000020",
+        "0x166000A1"
+      ],
+      "sample_urls": [
+        "https://github.com/PZH1gdmu/CMP40HX-Unlock/issues/19",
+        "https://github.com/PZH1gdmu/CMP40HX-Unlock/issues/16",
+        "https://github.com/PZH1gdmu/CMP40HX-Unlock/issues/30"
+      ],
+      "rank": 1
+    },
+    {
+      "device_category": "显卡",
+      "device_model": "PCI\\VEN_1002&DEV_164C&SUBSYS_3F9517AA",
+      "value_score": 36.7,
+      "heat_score": 3.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "pci",
+        "firmware",
+        "bios",
+        "uefi",
+        "驱动",
+        "driver",
+        "ven_",
+        "dev_",
+        "win7",
+        "code 43",
+        "error 43",
+        "显卡"
+      ],
+      "pain_points": [
+        "出现 Code 43，设备被系统禁用；系统过旧，新驱动不兼容"
+      ],
+      "error_codes": [
+        "Code 43"
+      ],
+      "sample_urls": [
+        "https://github.com/hrx114514x/win7-amd-apu-scanout-fix/issues/4"
+      ],
+      "rank": 2
+    },
+    {
+      "device_category": "老旧采集卡/工控卡",
+      "device_model": "nicaud",
+      "value_score": 36.0,
+      "heat_score": 2.5,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "采集卡",
+        "pci",
+        "pcie",
+        "驱动",
+        "driver",
+        "chipset",
+        "nic",
+        "dev_",
+        "xp"
+      ],
+      "pain_points": [
+        "系统过旧，新驱动不兼容；工控场景停机风险高，急需可用驱动"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/tbsdtv/linux_media/issues/430"
+      ],
+      "rank": 3
+    },
+    {
+      "device_category": "老旧采集卡/工控卡",
+      "device_model": "NVIDIA SDK",
+      "value_score": 32.5,
+      "heat_score": 2.5,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "采集卡",
+        "pci",
+        "pcie",
+        "驱动",
+        "driver",
+        "nic",
+        "legacy",
+        "xp"
+      ],
+      "pain_points": [
+        "系统过旧，新驱动不兼容；工控场景停机风险高，急需可用驱动"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/thanhtantran/agents-radar/issues/209"
+      ],
+      "rank": 4
+    },
+    {
+      "device_category": "老旧采集卡/工控卡",
+      "device_model": "RK3588",
+      "value_score": 31.7,
+      "heat_score": 5.0,
+      "mention_count": 2,
+      "whitelist_hits": [
+        "工控",
+        "采集卡",
+        "pci",
+        "pcie",
+        "驱动",
+        "driver",
+        "legacy",
+        "xp",
+        "nic"
+      ],
+      "pain_points": [
+        "系统过旧，新驱动不兼容；工控场景停机风险高，急需可用驱动"
+      ],
+      "error_codes": [
+        "0xfdc40000"
+      ],
+      "sample_urls": [
+        "https://github.com/thanhtantran/agents-radar/issues/212",
+        "https://github.com/thanhtantran/agents-radar/issues/176"
+      ],
+      "rank": 5
+    },
+    {
+      "device_category": "老旧采集卡/工控卡",
+      "device_model": "PFUZE100",
+      "value_score": 30.5,
+      "heat_score": 4.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "采集卡",
+        "firmware",
+        "uefi",
+        "驱动",
+        "driver",
+        "ethernet",
+        "xp"
+      ],
+      "pain_points": [
+        "系统过旧，新驱动不兼容；工控场景停机风险高，急需可用驱动"
+      ],
+      "error_codes": [
+        "0x43000000",
+        "0x410fd034",
+        "0xbf6cb700",
+        "0xbf6cdfff",
+        "0xffffffff"
+      ],
+      "sample_urls": [
+        "https://github.com/carloscn/imx8-bsp/issues/1"
+      ],
+      "rank": 6
+    },
+    {
+      "device_category": "老旧采集卡/工控卡",
+      "device_model": "VXI-11",
+      "value_score": 30.0,
+      "heat_score": 2.5,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "采集卡",
+        "daq",
+        "firmware",
+        "驱动",
+        "ethernet",
+        "legacy"
+      ],
+      "pain_points": [
+        "系统过旧，新驱动不兼容；工控场景停机风险高，急需可用驱动"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/daqifi/daqifi-nyquist-firmware/issues/327"
+      ],
+      "rank": 7
+    },
+    {
+      "device_category": "显卡",
+      "device_model": "Intel HD Graphics 4600",
+      "value_score": 28.5,
+      "heat_score": 3.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "pci",
+        "pcie",
+        "bios",
+        "uefi",
+        "driver",
+        "chipset",
+        "code 43",
+        "error 43",
+        "显卡",
+        "graphics"
+      ],
+      "pain_points": [
+        "出现 Code 43，设备被系统禁用"
+      ],
+      "error_codes": [
+        "Code 43",
+        "0xfed91000"
+      ],
+      "sample_urls": [
+        "https://serverfault.com/questions/1048811/vfio-igpu-passthrough-on-intel-4770-to-a-qemu-virtual-machine-proxmox"
+      ],
+      "rank": 8
+    },
+    {
+      "device_category": "老旧采集卡/工控卡",
+      "device_model": "NIDAQ device adapter",
+      "value_score": 28.5,
+      "heat_score": 2.5,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "采集卡",
+        "daq",
+        "pci",
+        "驱动",
+        "xp"
+      ],
+      "pain_points": [
+        "系统过旧，新驱动不兼容；工控场景停机风险高，急需可用驱动"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/micro-manager/mmCoreAndDevices/issues/822"
+      ],
+      "rank": 9
+    },
+    {
+      "device_category": "工控/板载网卡",
+      "device_model": "GT911",
+      "value_score": 28.5,
+      "heat_score": 1.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "firmware",
+        "驱动",
+        "driver",
+        "网卡",
+        "nic",
+        "老旧设备",
+        "legacy",
+        "xp"
+      ],
+      "pain_points": [
+        "系统过旧，新驱动不兼容"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/bitaxeorg/BAP-GT-TOUCH/pull/14"
+      ],
+      "rank": 10
+    },
+    {
+      "device_category": "老旧采集卡/工控卡",
+      "device_model": "nidaqmx",
+      "value_score": 28.0,
+      "heat_score": 2.5,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "采集卡",
+        "daq",
+        "驱动",
+        "driver",
+        "xp"
+      ],
+      "pain_points": [
+        "系统过旧，新驱动不兼容；工控场景停机风险高，急需可用驱动"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/ni/nidaqmx-python/issues/893"
+      ],
+      "rank": 11
+    },
+    {
+      "device_category": "老旧采集卡/工控卡",
+      "device_model": "SPD3303X",
+      "value_score": 27.0,
+      "heat_score": 2.5,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "采集卡",
+        "daq",
+        "驱动",
+        "driver",
+        "nic"
+      ],
+      "pain_points": [
+        "工控场景停机风险高，急需可用驱动"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/little-did-I-know/SCPI-Instrument-Control/pull/125"
+      ],
+      "rank": 12
+    },
+    {
+      "device_category": "工控/板载网卡",
+      "device_model": "ST7789",
+      "value_score": 26.5,
+      "heat_score": 3.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "驱动",
+        "driver",
+        "网卡",
+        "nic",
+        "xp",
+        "code 43",
+        "error 43",
+        "graphics"
+      ],
+      "pain_points": [
+        "出现 Code 43，设备被系统禁用；系统过旧，新驱动不兼容"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/openshwprojects/OpenBK7231T_App/pull/2238"
+      ],
+      "rank": 13
+    },
+    {
+      "device_category": "工控/板载网卡",
+      "device_model": "RTL8168",
+      "value_score": 26.0,
+      "heat_score": 1.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "pci",
+        "驱动",
+        "driver",
+        "网卡",
+        "老旧设备",
+        "legacy"
+      ],
+      "pain_points": [
+        "系统识别到设备和可能的驱动程序候选者，但未激活任何驱动程序。"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/mixutin/Vibrix/pull/87"
+      ],
+      "rank": 14
+    },
+    {
+      "device_category": "工控/板载网卡",
+      "device_model": "USB\\VID_04B4&PID_8613",
+      "value_score": 25.0,
+      "heat_score": 1.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "firmware",
+        "驱动",
+        "driver",
+        "网卡",
+        "nic",
+        "老旧设备"
+      ],
+      "pain_points": [
+        "系统过旧，新驱动不兼容"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://stackoverflow.com/questions/19886995/need-to-completely-remove-a-device-driver-in-windows-7"
+      ],
+      "rank": 15
+    },
+    {
+      "device_category": "工控/板载网卡",
+      "device_model": "AGM-002",
+      "value_score": 25.0,
+      "heat_score": 1.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "驱动",
+        "driver",
+        "网卡",
+        "nic",
+        "老旧设备",
+        "legacy",
+        "xp"
+      ],
+      "pain_points": [
+        "系统过旧，新驱动不兼容"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/waelzouari/AgriMind/issues/2"
+      ],
+      "rank": 16
+    },
+    {
+      "device_category": "显卡",
+      "device_model": "RTX 4070",
+      "value_score": 24.5,
+      "heat_score": 2.5,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "驱动",
+        "driver",
+        "主板",
+        "找不到驱动",
+        "missing driver",
+        "下架",
+        "显卡"
+      ],
+      "pain_points": [
+        "官方驱动难寻或已下架；工控场景停机风险高，急需可用驱动"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/faintonce/open-revo/issues/12"
+      ],
+      "rank": 17
+    },
+    {
+      "device_category": "串口/工控通信",
+      "device_model": "STM32",
+      "value_score": 23.68,
+      "heat_score": 2.0,
+      "mention_count": 2,
+      "whitelist_hits": [
+        "工控",
+        "驱动",
+        "driver",
+        "串口",
+        "老旧设备",
+        "legacy",
+        "xp"
+      ],
+      "pain_points": [
+        "系统过旧，新驱动不兼容",
+        "驱动中的FlashSize和CS高时间设置为固定值，可能导致硬件配置不匹配"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/xrobot-org/libxr/pull/247",
+        "https://github.com/zephyrproject-rtos/zephyr/pull/120156"
+      ],
+      "rank": 18
+    },
+    {
+      "device_category": "显卡",
+      "device_model": "PCI\\VEN_10DE&DEV_06C4&SUBSYS_083910DE",
+      "value_score": 23.5,
+      "heat_score": 3.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "pci",
+        "driver",
+        "ven_",
+        "dev_",
+        "code 43",
+        "error 43",
+        "显卡",
+        "graphics"
+      ],
+      "pain_points": [
+        "出现 Code 43，设备被系统禁用"
+      ],
+      "error_codes": [
+        "Code 43"
+      ],
+      "sample_urls": [
+        "https://stackoverflow.com/questions/30978508/nvidia-geforce-driver-for-windows-8-1-not-working-on-windows-10"
+      ],
+      "rank": 19
+    },
+    {
+      "device_category": "老旧采集卡/工控卡",
+      "device_model": "TEI49C",
+      "value_score": 23.5,
+      "heat_score": 2.5,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "采集卡",
+        "plc",
+        "驱动",
+        "xp"
+      ],
+      "pain_points": [
+        "系统过旧，新驱动不兼容；工控场景停机风险高，急需可用驱动"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/MeteoSwiss/gawkenya/issues/11"
+      ],
+      "rank": 20
+    },
+    {
+      "device_category": "工控/板载网卡",
+      "device_model": "N83624",
+      "value_score": 23.5,
+      "heat_score": 1.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "驱动",
+        "driver",
+        "网卡",
+        "nic",
+        "老旧设备",
+        "legacy"
+      ],
+      "pain_points": [
+        "系统过旧，新驱动不兼容"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/ami3go/NGI-N83624-Battery-simulator/pull/1"
+      ],
+      "rank": 21
+    },
+    {
+      "device_category": "工控/板载网卡",
+      "device_model": "RX 9070",
+      "value_score": 23.0,
+      "heat_score": 3.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "驱动",
+        "driver",
+        "网卡",
+        "xp",
+        "code 43",
+        "error 43"
+      ],
+      "pain_points": [
+        "出现 Code 43，设备被系统禁用；系统过旧，新驱动不兼容"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/blindrun/soat-miner/pull/5"
+      ],
+      "rank": 22
+    },
+    {
+      "device_category": "显卡",
+      "device_model": "Nvidia Error",
+      "value_score": 23.0,
+      "heat_score": 3.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "pci",
+        "pcie",
+        "bios",
+        "driver",
+        "code 43",
+        "error 43",
+        "显卡",
+        "graphics"
+      ],
+      "pain_points": [
+        "出现 Code 43，设备被系统禁用"
+      ],
+      "error_codes": [
+        "Error 43"
+      ],
+      "sample_urls": [
+        "https://superuser.com/questions/1544375/kvm-gpu-passthrough-nvidia-error-43"
+      ],
+      "rank": 23
+    },
+    {
+      "device_category": "老旧采集卡/工控卡",
+      "device_model": "SMI-4180",
+      "value_score": 22.5,
+      "heat_score": 2.5,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "采集卡",
+        "驱动",
+        "dev_",
+        "xp"
+      ],
+      "pain_points": [
+        "系统过旧，新驱动不兼容；工控场景停机风险高，急需可用驱动"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/smith-horn/skillsmith/issues/525"
+      ],
+      "rank": 24
+    },
+    {
+      "device_category": "老旧采集卡/工控卡",
+      "device_model": "R47",
+      "value_score": 22.5,
+      "heat_score": 2.5,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "采集卡",
+        "驱动",
+        "driver",
+        "xp"
+      ],
+      "pain_points": [
+        "系统过旧，新驱动不兼容；工控场景停机风险高，急需可用驱动"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/stevenlu101/Pt_Optimize/pull/1"
+      ],
+      "rank": 25
+    },
+    {
+      "device_category": "老旧采集卡/工控卡",
+      "device_model": "J12",
+      "value_score": 22.5,
+      "heat_score": 2.5,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "采集卡",
+        "驱动",
+        "driver",
+        "xp"
+      ],
+      "pain_points": [
+        "系统过旧，新驱动不兼容；工控场景停机风险高，急需可用驱动"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/4paradigm/phanthymotus-driver/pull/208"
+      ],
+      "rank": 26
+    },
+    {
+      "device_category": "显卡",
+      "device_model": "Intel P3700",
+      "value_score": 22.0,
+      "heat_score": 4.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "pci",
+        "pcie",
+        "驱动",
+        "code 43",
+        "error 43",
+        "显卡"
+      ],
+      "pain_points": [
+        "出现 Code 43，设备被系统禁用；工控场景停机风险高，急需可用驱动"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/polyuij42-del/qwen38-flash-next-w4a16-cmp170hx/issues/1"
+      ],
+      "rank": 27
+    },
+    {
+      "device_category": "工控/板载网卡",
+      "device_model": "C550",
+      "value_score": 21.5,
+      "heat_score": 2.5,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "驱动",
+        "网卡",
+        "nic",
+        "找不到驱动",
+        "下架"
+      ],
+      "pain_points": [
+        "官方驱动难寻或已下架"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/InfiniTensor/InfiniCore/pull/1554"
+      ],
+      "rank": 28
+    },
+    {
+      "device_category": "工控设备",
+      "device_model": "i2c",
+      "value_score": 21.5,
+      "heat_score": 1.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "驱动",
+        "driver",
+        "老旧设备",
+        "legacy",
+        "xp"
+      ],
+      "pain_points": [
+        "在 IDF >= 5.4 版本中，使用了旧的 I2C 驱动导致启动时崩溃"
+      ],
+      "error_codes": [
+        "0x4200808b",
+        "0x42004197",
+        "0x4200427e"
+      ],
+      "sample_urls": [
+        "https://github.com/espressif/esp32-camera/issues/864"
+      ],
+      "rank": 29
+    },
+    {
+      "device_category": "老旧采集卡/工控卡",
+      "device_model": "ADR-002",
+      "value_score": 21.0,
+      "heat_score": 2.5,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "采集卡",
+        "驱动",
+        "driver"
+      ],
+      "pain_points": [
+        "工控场景停机风险高，急需可用驱动"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/pavann19/DDS/pull/3"
+      ],
+      "rank": 30
+    },
+    {
+      "device_category": "工控/板载网卡",
+      "device_model": "Qualcomm Adreno",
+      "value_score": 21.0,
+      "heat_score": 1.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "驱动",
+        "driver",
+        "网卡",
+        "nic",
+        "graphics"
+      ],
+      "pain_points": [
+        "求助帖反馈驱动安装或匹配困难"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/pl4nty/winget-extras/issues/1535"
+      ],
+      "rank": 31
+    },
+    {
+      "device_category": "显卡",
+      "device_model": "RTX 5080",
+      "value_score": 19.5,
+      "heat_score": 3.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "驱动",
+        "driver",
+        "legacy",
+        "xp",
+        "code 43",
+        "error 43",
+        "显卡",
+        "graphics"
+      ],
+      "pain_points": [
+        "出现 Code 43，设备被系统禁用；系统过旧，新驱动不兼容"
+      ],
+      "error_codes": [
+        "error 1237",
+        "error 87"
+      ],
+      "sample_urls": [
+        "https://github.com/Nonary/Vibepollo/issues/521"
+      ],
+      "rank": 32
+    },
+    {
+      "device_category": "品牌打印机",
+      "device_model": "CSHARP-6214",
+      "value_score": 19.5,
+      "heat_score": 2.5,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "驱动",
+        "driver",
+        "nic",
+        "xp",
+        "找不到驱动",
+        "下架",
+        "打印机"
+      ],
+      "pain_points": [
+        "官方驱动难寻或已下架；系统过旧，新驱动不兼容"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/DEFRA/epr-register-enrol-backend/pull/195"
+      ],
+      "rank": 33
+    },
+    {
+      "device_category": "老旧采集卡/工控卡",
+      "device_model": "O02",
+      "value_score": 18.5,
+      "heat_score": 2.5,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "采集卡",
+        "驱动"
+      ],
+      "pain_points": [
+        "工控场景停机风险高，急需可用驱动"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/Xhhemoing/pi-sparkle/pull/46"
+      ],
+      "rank": 34
+    },
+    {
+      "device_category": "显卡",
+      "device_model": "Intel UHD 0x4626",
+      "value_score": 18.5,
+      "heat_score": 1.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "pci",
+        "驱动",
+        "driver",
+        "老旧设备",
+        "xp",
+        "显卡",
+        "graphics"
+      ],
+      "pain_points": [
+        "系统过旧，新驱动不兼容"
+      ],
+      "error_codes": [
+        "0xc0000005"
+      ],
+      "sample_urls": [
+        "https://github.com/ollama/ollama/issues/18672"
+      ],
+      "rank": 35
+    },
+    {
+      "device_category": "显卡",
+      "device_model": "AMD Ryzen",
+      "value_score": 18.0,
+      "heat_score": 6.0,
+      "mention_count": 2,
+      "whitelist_hits": [
+        "驱动",
+        "driver",
+        "xp",
+        "code 43",
+        "error 43",
+        "显卡",
+        "graphics"
+      ],
+      "pain_points": [
+        "出现 Code 43，设备被系统禁用；系统过旧，新驱动不兼容",
+        "出现 Code 43，设备被系统禁用"
+      ],
+      "error_codes": [
+        "Code 1",
+        "Code 43"
+      ],
+      "sample_urls": [
+        "https://github.com/microsoft/vscode/issues/335608",
+        "https://superuser.com/questions/1613143/windows-has-stopped-this-device-because-it-has-reported-problems-code-43"
+      ],
+      "rank": 36
+    },
+    {
+      "device_category": "声卡",
+      "device_model": "XU316",
+      "value_score": 17.5,
+      "heat_score": 3.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "firmware",
+        "驱动",
+        "driver",
+        "xp",
+        "code 43",
+        "error 43"
+      ],
+      "pain_points": [
+        "出现 Code 43，设备被系统禁用；系统过旧，新驱动不兼容"
+      ],
+      "error_codes": [
+        "Code 43"
+      ],
+      "sample_urls": [
+        "https://github.com/respeaker/reSpeaker_Lite/issues/13"
+      ],
+      "rank": 37
+    },
+    {
+      "device_category": "显卡",
+      "device_model": "RTX 3060",
+      "value_score": 17.5,
+      "heat_score": 3.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "驱动",
+        "driver",
+        "xp",
+        "code 43",
+        "error 43",
+        "显卡",
+        "graphics"
+      ],
+      "pain_points": [
+        "出现 Code 43，设备被系统禁用；系统过旧，新驱动不兼容"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/huggingface/AIFS-single-2.0-on-all-GPUs/pull/4"
+      ],
+      "rank": 38
+    },
+    {
+      "device_category": "显卡",
+      "device_model": "AMD Radeon",
+      "value_score": 17.5,
+      "heat_score": 3.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "驱动",
+        "driver",
+        "xp",
+        "code 43",
+        "error 43",
+        "显卡",
+        "graphics"
+      ],
+      "pain_points": [
+        "出现 Code 43，设备被系统禁用；系统过旧，新驱动不兼容"
+      ],
+      "error_codes": [
+        "Code 1"
+      ],
+      "sample_urls": [
+        "https://github.com/github/vscode-github-actions/issues/628"
+      ],
+      "rank": 39
+    },
+    {
+      "device_category": "串口/工控通信",
+      "device_model": "ontest2026",
+      "value_score": 17.5,
+      "heat_score": 2.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "驱动",
+        "driver",
+        "串口"
+      ],
+      "pain_points": [
+        "工控场景停机风险高，急需可用驱动"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/open-vela/nuttx/pull/397"
+      ],
+      "rank": 40
+    },
+    {
+      "device_category": "无线网卡",
+      "device_model": "HW-01",
+      "value_score": 17.5,
+      "heat_score": 1.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "驱动",
+        "driver",
+        "网卡",
+        "老旧设备",
+        "legacy",
+        "xp"
+      ],
+      "pain_points": [
+        "系统过旧，新驱动不兼容"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/totemize/totem/pull/28"
+      ],
+      "rank": 41
+    },
+    {
+      "device_category": "品牌打印机",
+      "device_model": "Z04",
+      "value_score": 17.0,
+      "heat_score": 2.5,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "驱动",
+        "driver",
+        "xp",
+        "打印机"
+      ],
+      "pain_points": [
+        "系统过旧，新驱动不兼容；工控场景停机风险高，急需可用驱动"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/hkjgg/Nexus/pull/1"
+      ],
+      "rank": 42
+    },
+    {
+      "device_category": "工控/板载网卡",
+      "device_model": "T80D",
+      "value_score": 17.0,
+      "heat_score": 2.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "工控",
+        "驱动",
+        "网卡",
+        "老旧设备"
+      ],
+      "pain_points": [
+        "系统过旧，新驱动不兼容；工控场景停机风险高，急需可用驱动"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/deretame/Breeze/pull/218"
+      ],
+      "rank": 43
+    },
+    {
+      "device_category": "显卡",
+      "device_model": "geforce 1080",
+      "value_score": 16.5,
+      "heat_score": 3.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "pci",
+        "驱动",
+        "xp",
+        "code 43",
+        "error 43",
+        "显卡"
+      ],
+      "pain_points": [
+        "出现 Code 43，设备被系统禁用；系统过旧，新驱动不兼容"
+      ],
+      "error_codes": [
+        "error 43"
+      ],
+      "sample_urls": [
+        "https://serverfault.com/questions/972077/hypervisor-cpuid-v0-or-hidden-state-on-equivlent-in-hyper-v"
+      ],
+      "rank": 44
+    },
+    {
+      "device_category": "显卡",
+      "device_model": "Intel Macs",
+      "value_score": 16.0,
+      "heat_score": 3.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "驱动",
+        "driver",
+        "xp",
+        "code 43",
+        "error 43",
+        "显卡"
+      ],
+      "pain_points": [
+        "出现 Code 43，设备被系统禁用；系统过旧，新驱动不兼容"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/scottmallinson/chief.ai/pull/93"
+      ],
+      "rank": 45
+    },
+    {
+      "device_category": "显卡",
+      "device_model": "E39999",
+      "value_score": 16.0,
+      "heat_score": 3.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "驱动",
+        "driver",
+        "xp",
+        "code 43",
+        "error 43",
+        "显卡"
+      ],
+      "pain_points": [
+        "出现 Code 43，设备被系统禁用；系统过旧，新驱动不兼容"
+      ],
+      "error_codes": [
+        "ERROR 08"
+      ],
+      "sample_urls": [
+        "https://github.com/vllm-project/vllm-ascend/issues/13449"
+      ],
+      "rank": 46
+    },
+    {
+      "device_category": "品牌打印机",
+      "device_model": "U220A",
+      "value_score": 16.0,
+      "heat_score": 2.5,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "驱动",
+        "driver",
+        "找不到驱动",
+        "下架",
+        "打印机"
+      ],
+      "pain_points": [
+        "官方驱动难寻或已下架"
+      ],
+      "error_codes": [
+        "error 1111"
+      ],
+      "sample_urls": [
+        "https://serverfault.com/questions/669552/remote-desktop-printer-redirection-driver-not-found"
+      ],
+      "rank": 47
+    },
+    {
+      "device_category": "显卡",
+      "device_model": "RS232",
+      "value_score": 14.5,
+      "heat_score": 3.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "driver",
+        "rs232",
+        "code 43",
+        "error 43",
+        "显卡"
+      ],
+      "pain_points": [
+        "出现 Code 43，设备被系统禁用"
+      ],
+      "error_codes": [
+        "Code 43"
+      ],
+      "sample_urls": [
+        "https://stackoverflow.com/questions/24207131/code-43-windows-has-stopped-the-device"
+      ],
+      "rank": 48
+    },
+    {
+      "device_category": "显卡",
+      "device_model": "RTX 3050",
+      "value_score": 13.5,
+      "heat_score": 3.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "driver",
+        "code 43",
+        "error 43",
+        "显卡",
+        "graphics"
+      ],
+      "pain_points": [
+        "出现 Code 43，设备被系统禁用"
+      ],
+      "error_codes": [
+        "Code 43"
+      ],
+      "sample_urls": [
+        "https://github.com/jamesstringer90/appsandbox/issues/86"
+      ],
+      "rank": 49
+    },
+    {
+      "device_category": "显卡",
+      "device_model": "Intel N100",
+      "value_score": 13.5,
+      "heat_score": 3.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "driver",
+        "code 43",
+        "error 43",
+        "显卡",
+        "graphics"
+      ],
+      "pain_points": [
+        "出现 Code 43，设备被系统禁用"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/asd123ch/rdp123/pull/10"
+      ],
+      "rank": 50
+    },
+    {
+      "device_category": "显卡",
+      "device_model": "Intel HD Graphics 4000",
+      "value_score": 13.5,
+      "heat_score": 3.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "driver",
+        "code 43",
+        "error 43",
+        "显卡",
+        "graphics"
+      ],
+      "pain_points": [
+        "出现 Code 43，设备被系统禁用"
+      ],
+      "error_codes": [
+        "code 43",
+        "Error: 0x80070002",
+        "Error: 2",
+        "0x80070002"
+      ],
+      "sample_urls": [
+        "https://superuser.com/questions/1035655/intel-hd-graphics-4000-driver-error-code-43-on-windows-10"
+      ],
+      "rank": 51
+    },
+    {
+      "device_category": "显卡",
+      "device_model": "AMD graphics driver",
+      "value_score": 13.5,
+      "heat_score": 3.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "driver",
+        "code 43",
+        "error 43",
+        "显卡",
+        "graphics"
+      ],
+      "pain_points": [
+        "出现 Code 43，设备被系统禁用"
+      ],
+      "error_codes": [
+        "Code 43"
+      ],
+      "sample_urls": [
+        "https://superuser.com/questions/1615321/what-can-i-do-to-fix-code-43-amd-graphics-driver-in-windows-7-device-manager"
+      ],
+      "rank": 52
+    },
+    {
+      "device_category": "显卡",
+      "device_model": "AMD card",
+      "value_score": 13.5,
+      "heat_score": 3.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "driver",
+        "code 43",
+        "error 43",
+        "显卡",
+        "graphics"
+      ],
+      "pain_points": [
+        "出现 Code 43，设备被系统禁用"
+      ],
+      "error_codes": [
+        "code 43"
+      ],
+      "sample_urls": [
+        "https://serverfault.com/questions/900629/force-display-resolution-on-amd-card-driver-for-teamviewer-with-monitor-unplugge"
+      ],
+      "rank": 53
+    },
+    {
+      "device_category": "显卡",
+      "device_model": "NVIDIA Container",
+      "value_score": 12.5,
+      "heat_score": 1.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "驱动",
+        "driver",
+        "老旧设备",
+        "显卡"
+      ],
+      "pain_points": [
+        "系统过旧，新驱动不兼容"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/QingyaFan/blog/issues/183"
+      ],
+      "rank": 54
+    },
+    {
+      "device_category": "显卡",
+      "device_model": "Intel GPU",
+      "value_score": 12.0,
+      "heat_score": 3.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "driver",
+        "code 43",
+        "error 43",
+        "显卡"
+      ],
+      "pain_points": [
+        "出现 Code 43，设备被系统禁用"
+      ],
+      "error_codes": [
+        "Code 43"
+      ],
+      "sample_urls": [
+        "https://superuser.com/questions/1635974/bypassing-error-code-43-when-installing-an-old-version-of-a-driver"
+      ],
+      "rank": 55
+    },
+    {
+      "device_category": "显卡",
+      "device_model": "GTX 1060",
+      "value_score": 12.0,
+      "heat_score": 3.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "driver",
+        "code 43",
+        "error 43",
+        "显卡"
+      ],
+      "pain_points": [
+        "出现 Code 43，设备被系统禁用"
+      ],
+      "error_codes": [
+        "code 43"
+      ],
+      "sample_urls": [
+        "https://github.com/dartraiden/NVIDIA-patcher/issues/576"
+      ],
+      "rank": 56
+    },
+    {
+      "device_category": "声卡",
+      "device_model": "IC-7300",
+      "value_score": 11.5,
+      "heat_score": 3.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "驱动",
+        "xp",
+        "code 43",
+        "error 43"
+      ],
+      "pain_points": [
+        "出现 Code 43，设备被系统禁用；系统过旧，新驱动不兼容"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/mm5agm/Icom_Web_Control/issues/45"
+      ],
+      "rank": 57
+    },
+    {
+      "device_category": "显卡",
+      "device_model": "X11",
+      "value_score": 10.5,
+      "heat_score": 1.0,
+      "mention_count": 1,
+      "whitelist_hits": [
+        "驱动",
+        "driver",
+        "显卡"
+      ],
+      "pain_points": [
+        "求助帖反馈驱动安装或匹配困难"
+      ],
+      "error_codes": [],
+      "sample_urls": [
+        "https://github.com/lilong7676/doubao-murmur/pull/24"
+      ],
+      "rank": 58
+    }
+  ],
+  "commercial_dropped": 0
+}

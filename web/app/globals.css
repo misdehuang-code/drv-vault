@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Syne", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth antialiased;
+  }
+
+  body {
+    @apply min-h-screen bg-ink-950 text-mist-100 font-body;
+    background-image:
+      radial-gradient(900px 420px at 12% -8%, rgba(61, 222, 168, 0.09), transparent 55%),
+      radial-gradient(700px 380px at 92% 8%, rgba(80, 140, 255, 0.06), transparent 50%),
+      linear-gradient(180deg, #05070b 0%, #0a0e14 48%, #05070b 100%);
+    background-attachment: fixed;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.22;
+    background-image:
+      linear-gradient(rgba(232, 238, 245, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(232, 238, 245, 0.04) 1px, transparent 1px);
+    background-size: 32px 32px;
+    mask-image: linear-gradient(180deg, #000 0%, transparent 78%);
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  ::selection {
+    @apply bg-signal/30 text-mist-100;
+  }
+}
+
+@layer components {
+  .site-shell {
+    @apply relative z-10 mx-auto w-[min(1120px,calc(100%-2rem))] px-0 py-5 pb-16;
+  }
+
+  .badge-verified {
+    @apply inline-flex items-center gap-1.5 rounded-md border border-signal/30 bg-signal/10 px-2 py-0.5 font-mono text-[0.7rem] uppercase tracking-wider text-signal;
+  }
+
+  .badge-price {
+    @apply inline-flex items-center rounded-md border border-warn/30 bg-warn/10 px-2 py-0.5 font-mono text-[0.75rem] font-semibold text-warn;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-signal px-4 py-2.5 text-sm font-semibold text-ink-950 transition hover:bg-signal-dim disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-mist-400/25 bg-transparent px-4 py-2.5 text-sm font-medium text-mist-200 transition hover:border-signal/40 hover:text-signal;
+  }
+
+  .panel {
+    @apply rounded-xl border border-mist-400/15 bg-ink-800/70 p-5 shadow-card backdrop-blur-sm;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "hosts": {
+    "archive.org": {
+      "fail": 84,
+      "ok": 0,
+      "timeout": 84
+    },
+    "download.ni.com": {
+      "fail": 6,
+      "ok": 0,
+      "timeout": 0
+    },
+    "anduin.linuxfromscratch.org": {
+      "ok": 8,
+      "fail": 0,
+      "timeout": 0
+    },
+    "us.download.nvidia.com": {
+      "ok": 0,
+      "fail": 1,
+      "timeout": 0
+    },
+    "img-s.msn.cn": {
+      "ok": 1,
+      "fail": 0,
+      "timeout": 0
+    },
+    "2c.zol-img.com.cn": {
+      "ok": 1,
+      "fail": 0,
+      "timeout": 0
+    },
+    "download.ihsdus.cn": {
+      "ok": 1,
+      "fail": 0,
+      "timeout": 0
+    },
+    "xfce.gpigj.cn": {
+      "ok": 1,
+      "fail": 0,
+      "timeout": 0
+    }
+  },
+  "updated_at": 1790581275.1227195
+}

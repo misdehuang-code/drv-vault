@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-09-29T03:57:54.947887+00:00",
+  "items": [
+    {
+      "model": "NVIDIA CMP",
+      "category": "显卡",
+      "queries": [
+        "NVIDIA CMP driver download archive",
+        "NVIDIA CMP legacy driver zip",
+        "NVIDIA CMP windows 7 driver download",
+        "\"NVIDIA CMP\" filetype:zip driver",
+        "NVIDIA CMP fix 0x88888888 driver",
+        "NVIDIA CMP 显卡 archived driver package"
+      ],
+      "pain_points": [
+        "Looking for archived NVIDIA CMP driver download after official support ended",
+        "Fix Code 43 / missing driver on legacy Windows for NVIDIA CMP",
+        "Hard-to-find NVIDIA CMP package: 官方驱动难寻或已下架"
+      ],
+      "seo_title": "NVIDIA CMP Legacy Driver Download | Fix Code 43 Archive",
+      "seo_description": "Download archived NVIDIA CMP (显卡) Windows drivers. Legacy XP/Win7 packages for Code 43 and discontinued OEM support.",
+      "links_found": [],
+      "ai_used": false
+    },
+    {
+      "model": "PCI\\VEN_1002&DEV_164C&SUBSYS_3F9517AA",
+      "category": "显卡",
+      "queries": [
+        "PCI\\VEN_1002&DEV_164C&SUBSYS_3F9517AA driver download archive",
+        "PCI\\VEN_1002&DEV_164C&SUBSYS_3F9517AA legacy driver zip",
+        "PCI\\VEN_1002&DEV_164C&SUBSYS_3F9517AA windows 7 driver download",
+        "\"PCI\\VEN_1002&DEV_164C&SUBSYS_3F9517AA\" filetype:zip driver",
+        "PCI\\VEN_1002&DEV_164C&SUBSYS_3F9517AA fix Code 43 driver",
+        "PCI\\VEN_1002&DEV_164C&SUBSYS_3F9517AA 显卡 archived driver package"
+      ],
+      "pain_points": [
+        "Looking for archived PCI\\VEN_1002&DEV_164C&SUBSYS_3F9517AA driver download after official support ended",
+        "Fix Code 43 / missing driver on legacy Windows for PCI\\VEN_1002&DEV_164C&SUBSYS_3F9517AA",
+        "Hard-to-find PCI\\VEN_1002&DEV_164C&SUBSYS_3F9517AA package: 出现 Code 43，设备被系统禁用；系统过旧，新驱动不兼容"
+      ],
+      "seo_title": "PCI\\VEN_1002&DEV_164C&SUBSYS_3F9517AA Legacy Driver Download | Fix Cod",
+      "seo_description": "Download archived PCI\\VEN_1002&DEV_164C&SUBSYS_3F9517AA (显卡) Windows drivers. Legacy XP/Win7 packages for Code 43 and discontinued OEM support.",
+      "links_found": [],
+      "ai_used": false
+    },
+    {
+      "model": "nicaud",
+      "category": "老旧采集卡_工控卡",
+      "queries": [
+        "nicaud driver download archive",
+        "nicaud legacy driver zip",
+        "nicaud windows 7 driver download",
+        "\"nicaud\" filetype:zip driver",
+        "nicaud fix code 43 driver",
+        "nicaud 老旧采集卡/工控卡 archived driver package"
+      ],
+      "pain_points": [
+        "Looking for archived nicaud driver download after official support ended",
+        "Fix Code 43 / missing driver on legacy Windows for nicaud",
+        "Hard-to-find nicaud package: 系统过旧，新驱动不兼容；工控场景停机风险高，急需可用驱动"
+      ],
+      "seo_title": "nicaud Legacy Driver Download | Fix Code 43 Archive",
+      "seo_description": "Download archived nicaud (老旧采集卡/工控卡) Windows drivers. Legacy XP/Win7 packages for Code 43 and discontinued OEM support.",
+      "links_found": [],
+      "ai_used": false
+    }
+  ]
+}

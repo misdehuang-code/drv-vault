@@ -1,0 +1,449 @@
+{
+  "items": {
+    "agm-002": {
+      "model": "AGM-002",
+      "last_round": 2,
+      "fail_streak": 2,
+      "status": "sunk",
+      "skip_until_round": 999,
+      "sunk_at_round": 2
+    },
+    "nvidia sdk": {
+      "model": "NVIDIA SDK",
+      "last_round": 1,
+      "fail_streak": 2,
+      "skip_until_round": 999,
+      "status": "sunk",
+      "sunk_at_round": 1
+    },
+    "nidaq device adapter": {
+      "model": "NIDAQ device adapter",
+      "last_round": 1,
+      "fail_streak": 2,
+      "skip_until_round": 999,
+      "status": "sunk",
+      "sunk_at_round": 1
+    },
+    "nvidia error": {
+      "model": "Nvidia Error",
+      "last_round": 1,
+      "fail_streak": 2,
+      "skip_until_round": 999,
+      "status": "sunk",
+      "sunk_at_round": 1
+    },
+    "j12": {
+      "model": "J12",
+      "last_round": 1,
+      "fail_streak": 2,
+      "status": "sunk",
+      "skip_until_round": 999,
+      "sunk_at_round": 1
+    },
+    "x11": {
+      "model": "X11",
+      "last_round": 1,
+      "fail_streak": 2,
+      "status": "sunk",
+      "skip_until_round": 999,
+      "sunk_at_round": 1
+    },
+    "rtl8168": {
+      "model": "RTL8168",
+      "last_round": 48,
+      "fail_streak": 0,
+      "skip_until_round": 0,
+      "status": "active"
+    },
+    "pci_ven_10de&dev_06c4&subsys_083910de": {
+      "model": "PCI\\VEN_10DE&DEV_06C4&SUBSYS_083910DE",
+      "last_round": 48,
+      "fail_streak": 0,
+      "skip_until_round": 0,
+      "status": "active"
+    },
+    "n83624": {
+      "model": "N83624",
+      "last_round": 42,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 62,
+      "sunk_at_round": 42
+    },
+    "smi-4180": {
+      "model": "SMI-4180",
+      "last_round": 42,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 62,
+      "sunk_at_round": 42
+    },
+    "intel p3700": {
+      "model": "Intel P3700",
+      "last_round": 42,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 62,
+      "sunk_at_round": 42
+    },
+    "adr-002": {
+      "model": "ADR-002",
+      "last_round": 42,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 62,
+      "sunk_at_round": 42
+    },
+    "qualcomm adreno": {
+      "model": "Qualcomm Adreno",
+      "last_round": 42,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 62,
+      "sunk_at_round": 42
+    },
+    "rtx 5080": {
+      "model": "RTX 5080",
+      "last_round": 48,
+      "fail_streak": 0,
+      "status": "active",
+      "skip_until_round": 0,
+      "sunk_at_round": 22
+    },
+    "csharp-6214": {
+      "model": "CSHARP-6214",
+      "last_round": 43,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 63,
+      "sunk_at_round": 43
+    },
+    "intel uhd 0x4626": {
+      "model": "Intel UHD 0x4626",
+      "last_round": 48,
+      "fail_streak": 0,
+      "status": "active",
+      "skip_until_round": 0,
+      "sunk_at_round": 23
+    },
+    "amd ryzen": {
+      "model": "AMD Ryzen",
+      "last_round": 43,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 63,
+      "sunk_at_round": 43
+    },
+    "xu316": {
+      "model": "XU316",
+      "last_round": 43,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 63,
+      "sunk_at_round": 43
+    },
+    "rtx 3060": {
+      "model": "RTX 3060",
+      "last_round": 48,
+      "fail_streak": 0,
+      "status": "active",
+      "skip_until_round": 0,
+      "sunk_at_round": 23
+    },
+    "amd radeon": {
+      "model": "AMD Radeon",
+      "last_round": 48,
+      "fail_streak": 0,
+      "skip_until_round": 0,
+      "status": "active"
+    },
+    "ontest2026": {
+      "model": "ontest2026",
+      "last_round": 44,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 64,
+      "sunk_at_round": 44
+    },
+    "z04": {
+      "model": "Z04",
+      "last_round": 44,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 64,
+      "sunk_at_round": 44
+    },
+    "t80d": {
+      "model": "T80D",
+      "last_round": 44,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 64,
+      "sunk_at_round": 44
+    },
+    "geforce 1080": {
+      "model": "geforce 1080",
+      "last_round": 48,
+      "fail_streak": 0,
+      "status": "active",
+      "skip_until_round": 0,
+      "sunk_at_round": 24
+    },
+    "intel macs": {
+      "model": "Intel Macs",
+      "last_round": 44,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 64,
+      "sunk_at_round": 44
+    },
+    "e39999": {
+      "model": "E39999",
+      "last_round": 45,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 65,
+      "sunk_at_round": 45
+    },
+    "u220a": {
+      "model": "U220A",
+      "last_round": 45,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 65,
+      "sunk_at_round": 45
+    },
+    "rs232": {
+      "model": "RS232",
+      "last_round": 45,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 65,
+      "sunk_at_round": 45
+    },
+    "rtx 3050": {
+      "model": "RTX 3050",
+      "last_round": 49,
+      "fail_streak": 0,
+      "status": "active",
+      "skip_until_round": 0,
+      "sunk_at_round": 25
+    },
+    "intel n100": {
+      "model": "Intel N100",
+      "last_round": 49,
+      "fail_streak": 0,
+      "status": "active",
+      "skip_until_round": 0,
+      "sunk_at_round": 25
+    },
+    "intel hd graphics 4000": {
+      "model": "Intel HD Graphics 4000",
+      "last_round": 49,
+      "fail_streak": 0,
+      "status": "active",
+      "skip_until_round": 0,
+      "sunk_at_round": 26
+    },
+    "amd graphics driver": {
+      "model": "AMD graphics driver",
+      "last_round": 49,
+      "fail_streak": 0,
+      "skip_until_round": 0,
+      "status": "active"
+    },
+    "amd card": {
+      "model": "AMD card",
+      "last_round": 46,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 66,
+      "sunk_at_round": 46
+    },
+    "nvidia container": {
+      "model": "NVIDIA Container",
+      "last_round": 46,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 66,
+      "sunk_at_round": 46
+    },
+    "intel gpu": {
+      "model": "Intel GPU",
+      "last_round": 49,
+      "fail_streak": 0,
+      "status": "active",
+      "skip_until_round": 0,
+      "sunk_at_round": 26
+    },
+    "gtx 1060": {
+      "model": "GTX 1060",
+      "last_round": 49,
+      "fail_streak": 0,
+      "status": "active",
+      "skip_until_round": 0,
+      "sunk_at_round": 27
+    },
+    "ic-7300": {
+      "model": "IC-7300",
+      "last_round": 47,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 67,
+      "sunk_at_round": 47
+    },
+    "pfuze100": {
+      "model": "PFUZE100",
+      "last_round": 41,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 61,
+      "sunk_at_round": 41
+    },
+    "vxi-11": {
+      "model": "VXI-11",
+      "last_round": 41,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 61,
+      "sunk_at_round": 41
+    },
+    "intel hd graphics 4600": {
+      "model": "Intel HD Graphics 4600",
+      "last_round": 49,
+      "fail_streak": 0,
+      "skip_until_round": 0,
+      "status": "active"
+    },
+    "gt911": {
+      "model": "GT911",
+      "last_round": 41,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 61,
+      "sunk_at_round": 41
+    },
+    "nidaqmx": {
+      "model": "nidaqmx",
+      "last_round": 49,
+      "fail_streak": 0,
+      "skip_until_round": 0,
+      "status": "active"
+    },
+    "spd3303x": {
+      "model": "SPD3303X",
+      "last_round": 49,
+      "fail_streak": 0,
+      "skip_until_round": 0,
+      "status": "active"
+    },
+    "st7789": {
+      "model": "ST7789",
+      "last_round": 41,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 61,
+      "sunk_at_round": 41
+    },
+    "usb_vid_04b4&pid_8613": {
+      "model": "USB\\VID_04B4&PID_8613",
+      "last_round": 48,
+      "fail_streak": 0,
+      "skip_until_round": 0,
+      "status": "active"
+    },
+    "rtx 4070": {
+      "model": "RTX 4070",
+      "last_round": 48,
+      "fail_streak": 0,
+      "skip_until_round": 0,
+      "status": "active"
+    },
+    "stm32": {
+      "model": "STM32",
+      "last_round": 41,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 61,
+      "sunk_at_round": 41
+    },
+    "tei49c": {
+      "model": "TEI49C",
+      "last_round": 41,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 61,
+      "sunk_at_round": 41
+    },
+    "rx 9070": {
+      "model": "RX 9070",
+      "last_round": 41,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 61,
+      "sunk_at_round": 41
+    },
+    "r47": {
+      "model": "R47",
+      "last_round": 41,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 61,
+      "sunk_at_round": 41
+    },
+    "c550": {
+      "model": "C550",
+      "last_round": 41,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 61,
+      "sunk_at_round": 41
+    },
+    "o02": {
+      "model": "O02",
+      "last_round": 41,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 61,
+      "sunk_at_round": 41
+    },
+    "hw-01": {
+      "model": "HW-01",
+      "last_round": 41,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 61,
+      "sunk_at_round": 41
+    },
+    "nvidia cmp": {
+      "model": "NVIDIA CMP",
+      "last_round": 49,
+      "fail_streak": 0,
+      "skip_until_round": 0,
+      "status": "active"
+    },
+    "pci_ven_1002&dev_164c&subsys_3f9517aa": {
+      "model": "PCI\\VEN_1002&DEV_164C&SUBSYS_3F9517AA",
+      "last_round": 49,
+      "fail_streak": 0,
+      "skip_until_round": 0,
+      "status": "active"
+    },
+    "nicaud": {
+      "model": "nicaud",
+      "last_round": 41,
+      "fail_streak": 4,
+      "status": "sunk",
+      "skip_until_round": 61,
+      "sunk_at_round": 41
+    },
+    "rk3588": {
+      "model": "RK3588",
+      "last_round": 49,
+      "fail_streak": 0,
+      "skip_until_round": 0,
+      "status": "active"
+    }
+  },
+  "updated_at": "2026-09-28T07:01:49.144527+00:00"
+}

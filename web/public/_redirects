@@ -1,0 +1,3 @@
+# Cloudflare Pages — SPA rewrite for driver detail (chunk-backed client page)
+/drivers/:slug  /drivers/_/index.html  200
+/drivers/:slug/ /drivers/_/index.html  200

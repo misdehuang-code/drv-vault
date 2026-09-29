@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block title %}商业控制台 · 驱匣{% endblock %}
+{% block content %}
+<p id="busy-note" class="note" {% if busy %}style="display:block"{% endif %}>
+  商业流水线运行中。要停请点「停止」。
+</p>
+
+<section class="panel hero-pipeline">
+  <h2>驱匣 · 商业级自动产线</h2>
+  <p class="hero-desc">
+    <strong>开始 / 停止</strong>直接控制整条商业流程（常驻）：
+    <strong>需求发现 → 精准获链 → 直链验证 → SEO 文案 → 索引/店面导航</strong>。
+    只寻址与验活，不落盘下载包体。
+  </p>
+  <ol class="phase-flow" id="phase-flow">
+    {% for p in phases %}
+    <li data-phase="{{ p.code }}"><span class="phase-code">{{ p.code }}</span>{{ p.title }}</li>
+    {% endfor %}
+  </ol>
+
+  <div class="form-row hero-opts" id="pipeline-opts">
+    <label>需求采样/词
+      <input id="opt-max-per-query" name="max_per_query" type="number" value="5" min="1" max="20" />
+    </label>
+    <label>验链并发
+      <input id="opt-harvest-workers" name="harvest_workers" type="number" value="4" min="1" max="8" />
+    </label>
+  </div>
+  <div class="hero-actions">
+    <button class="btn-hero" type="button" id="btn-start" {% if busy %}disabled{% endif %}>开始</button>
+    <button class="btn-pause" type="button" id="btn-stop" {% if not busy %}disabled{% endif %}>停止</button>
+  </div>
+
+  <div class="sync-box" id="sync-box">
+    <div class="sync-copy">
+      <strong>Cloudflare 店面同步</strong>
+      <p id="sync-hint" class="muted">检查本地 catalog 是否有未发布变更…</p>
+    </div>
+    <button type="button" class="btn-sync is-idle" id="btn-sync" disabled>
+      Up to Date
+    </button>
+  </div>
+  <p class="muted" style="margin:.75rem 0 0;font-size:.85rem">
+    开始 = 跑完整五阶段并自动连轮；停止 ≈ 数秒内退出。店面商品字段：model / category / description / original_direct_url。
+  </p>
+</section>
+
+<div class="stats">
+  <div class="stat"><div class="n" id="stat-sku">{{ commerce.sku_ready }}</div><div class="l">店面商品</div></div>
+  <div class="stat"><div class="n" id="stat-wl">{{ commerce.whitelist_skus }}</div><div class="l">需求型号</div></div>
+  <div class="stat"><div class="n" id="stat-queue">{{ commerce.queue_links }}</div><div class="l">待验→可成商品</div></div>
+  <div class="stat"><div class="n" id="stat-phase">{% if job and job.phase %}{{ job.phase }}{% else %}—{% endif %}</div><div class="l">当前阶段</div></div>
+</div>
+<p class="muted" style="margin:.5rem 0 0;font-size:.85rem">
+  店面：<a href="http://127.0.0.1:3000" target="_blank" rel="noopener">http://127.0.0.1:3000</a>
+  · MERCHANDIZE / Sync 走<strong>增长账本</strong>：历史好货只增合并，不会被更小集合覆盖；绿按钮发布的是合并后的完整目录
+</p>
+
+<section class="panel" style="margin-top:1rem">
+  <h2>实时日志</h2>
+  <div id="live-logs" class="logs">{{ logs|join('\n') }}</div>
+  <p class="muted" style="margin:.5rem 0 0;font-size:.82rem">运行中约每 1.5 秒刷新 · <a href="/logs">完整日志</a></p>
+</section>
+
+<section class="panel">
+  <h2>店面商品目录 <span class="muted" style="font-size:.85rem;font-weight:500">（商品化阶段写入）</span></h2>
+  <table>
+    <thead>
+      <tr>
+        <th>SKU</th>
+        <th>SEO 标题</th>
+        <th>痛点</th>
+        <th>文件数</th>
+        <th>价值分</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for r in catalog %}
+      <tr>
+        <td><strong>{{ r.sku }}</strong></td>
+        <td>{{ r.seo_title or '—' }}</td>
+        <td>{{ (r.pain_points or ['—'])|join('；') }}</td>
+        <td>{{ r.file_count or 0 }}</td>
+        <td>{{ r.value_score or '—' }}</td>
+      </tr>
+      {% else %}
+      <tr><td colspan="5" class="muted">暂无入库商品。点「开始」跑完 MERCHANDIZE 后出现。</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endblock %}

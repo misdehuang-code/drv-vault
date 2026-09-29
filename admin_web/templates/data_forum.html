@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}论坛数据 · 驱匣抓取后台{% endblock %}
+{% block content %}
+<section class="panel explain">
+  <h2>列表说明</h2>
+  <p class="muted" style="margin:0">每一行 = 网上有人在<strong>找某个设备的驱动/修复包</strong>。这不是直接下载文件，而是「急需什么型号」的线索。</p>
+</section>
+<section class="panel">
+  <h2>线路 B · 论坛急需型号线索</h2>
+  <div class="filters">
+    <a href="/data/forum" class="{% if not status %}active{% endif %}">全部</a>
+    {% for s in ['pending','cleaned','approved','deleted','error'] %}
+    <a href="/data/forum?status={{ s }}" class="{% if status==s %}active{% endif %}">{{ s }}</a>
+    {% endfor %}
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>① 设备型号</th>
+        <th>设备大类</th>
+        <th>② 来源网站</th>
+        <th>③ 做什么用 / 为什么难找</th>
+        <th>报错代码</th>
+        <th>状态</th>
+        <th>打开原帖</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for r in rows %}
+      <tr>
+        <td>{{ r.id }}</td>
+        <td><strong>{{ r['显示型号'] }}</strong></td>
+        <td>{{ r['设备大类'] }}</td>
+        <td>{{ r.get('来源网站') or r['下载来源网站'] }}</td>
+        <td>{{ r['设备用途说明'] }}</td>
+        <td>{{ r['报错信息'] }}</td>
+        <td><span class="tag">{{ r.status }}</span></td>
+        <td>{% if r['原始链接'] %}<a href="{{ r['原始链接'] }}" target="_blank" rel="noopener">打开</a>{% else %}-{% endif %}</td>
+      </tr>
+      {% else %}
+      <tr><td colspan="8" class="muted">没有记录</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <div class="pager">
+    {% if page > 1 %}
+    <a class="btn" href="/data/forum?page={{ page-1 }}{% if status %}&status={{ status }}{% endif %}">上一页</a>
+    {% endif %}
+    <span class="muted">第 {{ page }} 页</span>
+    {% if rows|length >= 40 %}
+    <a class="btn" href="/data/forum?page={{ page+1 }}{% if status %}&status={{ status }}{% endif %}">下一页</a>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

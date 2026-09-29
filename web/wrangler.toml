@@ -1,0 +1,4 @@
+# Cloudflare Pages (used by sync_catalog.py --deploy / admin Sync button)
+name = "drvvault"
+compatibility_date = "2024-11-12"
+pages_build_output_dir = "out"

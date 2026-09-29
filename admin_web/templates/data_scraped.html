@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}驱动数据 · 驱匣抓取后台{% endblock %}
+{% block content %}
+<section class="panel explain">
+  <h2>列表说明</h2>
+  <p class="muted" style="margin:0">每一行 = 从一个网站抓到的<strong>一个驱动页/安装包线索</strong>（用于挖直链，不本地下载）。请看：①型号 ②来源网站 ③用途。</p>
+</section>
+<section class="panel">
+  <h2>线路 A · 抓回来的页面/安装包</h2>
+  <div class="filters">
+    <a href="/data/scraped" class="{% if not status %}active{% endif %}">全部</a>
+    {% for s in ['pending','cleaned','approved','deleted','error'] %}
+    <a href="/data/scraped?status={{ s }}" class="{% if status==s %}active{% endif %}">{{ s }}</a>
+    {% endfor %}
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>① 机器/软件型号</th>
+        <th>资源类型（驱动/修复包？）</th>
+        <th>② 来源网站</th>
+        <th>③ 做什么用</th>
+        <th>状态</th>
+        <th>打开原页</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for r in rows %}
+      <tr>
+        <td>{{ r.id }}</td>
+        <td><strong>{{ r['显示型号'] }}</strong></td>
+        <td>{{ r['资源类型'] }}</td>
+        <td>{{ r.get('来源网站') or r['下载来源网站'] }}</td>
+        <td>{{ r['设备用途说明'] }}</td>
+        <td><span class="tag">{{ r.status }}</span></td>
+        <td>{% if r['原始链接'] %}<a href="{{ r['原始链接'] }}" target="_blank" rel="noopener">打开</a>{% else %}-{% endif %}</td>
+      </tr>
+      {% else %}
+      <tr><td colspan="7" class="muted">没有记录</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <div class="pager">
+    {% if page > 1 %}
+    <a class="btn" href="/data/scraped?page={{ page-1 }}{% if status %}&status={{ status }}{% endif %}">上一页</a>
+    {% endif %}
+    <span class="muted">第 {{ page }} 页</span>
+    {% if rows|length >= 40 %}
+    <a class="btn" href="/data/scraped?page={{ page+1 }}{% if status %}&status={{ status }}{% endif %}">下一页</a>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

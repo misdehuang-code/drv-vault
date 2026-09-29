@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}驱匣抓取后台{% endblock %}</title>
+  <link rel="stylesheet" href="/static/admin.css" />
+  <script>
+    let syncingLocal = false;
+    let pollTimer = null;
+    let startInFlight = false;
+    let stopInFlight = false;
+
+    function applySyncUi(sync, busy, job) {
+      const btn = document.getElementById('btn-sync');
+      const hint = document.getElementById('sync-hint');
+      if (!btn) return;
+
+      const jobSyncing =
+        !!(busy && job && (job.kind === 'sync' || String(job.name || '').indexOf('Cloudflare') >= 0));
+      const isSyncing = syncingLocal || jobSyncing;
+
+      if (isSyncing) {
+        btn.disabled = true;
+        btn.className = 'btn-sync is-syncing';
+        btn.textContent = 'Syncing...';
+        if (hint) hint.textContent = '正在去重 catalog 并调用 Wrangler 部署…';
+        return;
+      }
+
+      if (syncingLocal && !busy) syncingLocal = false;
+
+      const needs = !!(sync && sync.needs_sync);
+      const n = (sync && sync.new_items_count) || 0;
+      if (needs) {
+        btn.disabled = !!busy;
+        btn.className = 'btn-sync is-ready';
+        btn.textContent = n > 0
+          ? ('Sync to Cloudflare · +' + n)
+          : 'Sync to Cloudflare';
+        if (hint) {
+            hint.textContent = busy
+            ? '流水线运行中，停止后再同步。同步会发布「增长合并后」的完整目录（不会抹掉历史好货）。'
+            : ('检测到未同步变更' + (n ? ('（约 ' + n + ' 条）') : '') + '。Sync = 增长合并 + 严格去重（同 URL/同型号只留最优）后整站发布。');
+        }
+      } else {
+        btn.disabled = true;
+        btn.className = 'btn-sync is-idle';
+        btn.textContent = 'Up to Date';
+        if (hint) {
+          const at = sync && sync.last_synced_at
+            ? String(sync.last_synced_at).replace('T', ' ').slice(0, 19)
+            : '';
+          hint.textContent = at
+            ? ('店面目录已与 Cloudflare 对齐 · 上次同步 ' + at)
+            : '本地与 Cloudflare 状态一致，无需同步。';
+        }
+      }
+    }
+
+    function highlightPhase(phaseCode) {
+      const flow = document.getElementById('phase-flow');
+      if (!flow) return;
+      flow.querySelectorAll('li').forEach(function (li) {
+        const on = phaseCode && li.getAttribute('data-phase') === phaseCode;
+        li.classList.toggle('is-active', !!on);
+      });
+    }
+
+    function applyControlUi(data) {
+      const canStart = !!data.can_start;
+      const canStop = !!data.can_stop;
+      const busy = !!data.busy;
+      const pauseReq = !!data.pause_requested;
+      const pipeline = !!data.pipeline_running;
+      const syncRun = !!data.sync_running;
+
+      const startBtn = document.getElementById('btn-start');
+      const stopBtn = document.getElementById('btn-stop') || document.getElementById('btn-pause');
+      if (startBtn && !startInFlight) startBtn.disabled = !canStart;
+      if (stopBtn && !stopInFlight) {
+        stopBtn.disabled = !canStop;
+        stopBtn.textContent = pauseReq ? '正在停止…' : '停止';
+      }
+
+      const badge = document.getElementById('job-badge');
+      if (badge) {
+        if (pipeline && pauseReq) {
+          badge.textContent = '正在停止…';
+          badge.className = 'badge badge-run';
+        } else if (pipeline && data.job) {
+          badge.textContent = '运行中 · ' + (data.job.phase || data.job.name || '');
+          badge.className = 'badge badge-run';
+        } else if (syncRun) {
+          badge.textContent = '同步中 · Cloudflare';
+          badge.className = 'badge badge-run';
+        } else if (data.job && data.job.status === 'failed') {
+          badge.textContent = '失败 · ' + (data.job.name || '');
+          badge.className = 'badge badge-fail';
+        } else if (data.job && data.job.status === 'paused') {
+          badge.textContent = '已停止';
+          badge.className = 'badge badge-ok';
+        } else if (data.job && data.job.status === 'success') {
+          badge.textContent = '空闲 · 上次成功';
+          badge.className = 'badge badge-ok';
+        } else {
+          badge.textContent = '空闲';
+          badge.className = 'badge';
+        }
+      }
+
+      const busyNote = document.getElementById('busy-note');
+      if (busyNote) {
+        if (pipeline && pauseReq) {
+          busyNote.style.display = 'block';
+          busyNote.textContent = '正在强制停止流水线子进程…';
+        } else if (pipeline) {
+          busyNote.style.display = 'block';
+          busyNote.textContent = '商业流水线运行中。点「停止」会立即结束（不等网络请求）。';
+        } else if (syncRun) {
+          busyNote.style.display = 'block';
+          busyNote.textContent = 'Cloudflare 同步进行中（请等待结束后再开始流水线）。';
+        } else {
+          busyNote.style.display = 'none';
+        }
+      }
+
+      const phaseCode = (data.job && data.job.phase) || '';
+      highlightPhase(phaseCode === 'STOPPING' ? '' : phaseCode);
+      const phaseEl = document.getElementById('stat-phase');
+      if (phaseEl) {
+        phaseEl.textContent = phaseCode || (busy ? '…' : '—');
+      }
+
+      if (data.commerce) {
+        var sku = document.getElementById('stat-sku');
+        var wl = document.getElementById('stat-wl');
+        var q = document.getElementById('stat-queue');
+        if (sku) sku.textContent = data.commerce.sku_ready;
+        if (wl) wl.textContent = data.commerce.whitelist_skus;
+        if (q) q.textContent = data.commerce.queue_links;
+      }
+
+      const logBox = document.getElementById('live-logs');
+      if (logBox && data.logs) {
+        logBox.textContent = data.logs.join('\n');
+        logBox.scrollTop = logBox.scrollHeight;
+      }
+
+      applySyncUi(data.sync || null, busy, data.job || null);
+      schedulePoll(busy || pauseReq);
+    }
+
+    function schedulePoll(fast) {
+      if (pollTimer) clearInterval(pollTimer);
+      pollTimer = setInterval(refreshStatus, fast ? 1500 : 4000);
+    }
+
+    async function refreshStatus() {
+      try {
+        const res = await fetch('/api/status');
+        const data = await res.json();
+        applyControlUi(data);
+      } catch (e) {}
+    }
+
+    async function startPipeline() {
+      const startBtn = document.getElementById('btn-start');
+      if (!startBtn || startBtn.disabled || startInFlight) return;
+      startInFlight = true;
+      startBtn.disabled = true;
+      startBtn.textContent = '启动中…';
+      const payload = {
+        sources: 'github,reddit',
+        use_ai: true,
+        continuous: true,
+        max_per_query: Number((document.getElementById('opt-max-per-query') || {}).value || 5),
+        harvest_workers: Number((document.getElementById('opt-harvest-workers') || {}).value || 4),
+        clean_forum_limit: 80,
+        harvest_rate_mbps: 0,
+        offline: false,
+        round_sleep_sec: 12,
+      };
+      try {
+        const res = await fetch('/api/pipeline/start', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const data = await res.json();
+        if (!res.ok || !data.ok) {
+          alert((data && (data.hint || data.error)) || '启动失败');
+        }
+        await refreshStatus();
+      } catch (e) {
+        alert('无法连接 /api/pipeline/start，请确认管理台已启动');
+      } finally {
+        startInFlight = false;
+        const btn = document.getElementById('btn-start');
+        if (btn) btn.textContent = '开始';
+        refreshStatus();
+      }
+    }
+
+    async function stopPipeline() {
+      const stopBtn = document.getElementById('btn-stop') || document.getElementById('btn-pause');
+      if (!stopBtn || stopBtn.disabled || stopInFlight) return;
+      stopInFlight = true;
+      stopBtn.disabled = true;
+      stopBtn.textContent = '正在停止…';
+      try {
+        const res = await fetch('/api/pipeline/stop', { method: 'POST' });
+        const data = await res.json();
+        if (!res.ok || !data.ok) {
+          alert((data && (data.hint || data.error)) || '停止失败');
+        }
+        await refreshStatus();
+      } catch (e) {
+        alert('无法连接 /api/pipeline/stop');
+      } finally {
+        stopInFlight = false;
+        refreshStatus();
+      }
+    }
+
+    async function triggerCloudflareSync() {
+      const btn = document.getElementById('btn-sync');
+      if (!btn || btn.disabled) return;
+      syncingLocal = true;
+      applySyncUi({ needs_sync: true }, true, { name: 'Sync to Cloudflare', kind: 'sync' });
+      try {
+        const res = await fetch('/api/sync-cloudflare', { method: 'POST' });
+        const data = await res.json();
+        if (!res.ok || !data.ok) {
+          syncingLocal = false;
+          alert((data && (data.hint || data.error)) || '同步启动失败');
+          refreshStatus();
+          return;
+        }
+      } catch (e) {
+        syncingLocal = false;
+        alert('无法连接后台 /api/sync-cloudflare');
+        refreshStatus();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      refreshStatus();
+      schedulePoll(false);
+      const startBtn = document.getElementById('btn-start');
+      const stopBtn = document.getElementById('btn-stop') || document.getElementById('btn-pause');
+      const syncBtn = document.getElementById('btn-sync');
+      if (startBtn) startBtn.addEventListener('click', startPipeline);
+      if (stopBtn) stopBtn.addEventListener('click', stopPipeline);
+      if (syncBtn) syncBtn.addEventListener('click', triggerCloudflareSync);
+    });
+  </script>
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <div class="shell">
+    <header class="top">
+      <a class="brand" href="/">驱<span>匣</span> · 商业产线</a>
+      <nav>
+        <a href="/">控制台</a>
+        <a href="/logs">运行日志</a>
+      </nav>
+      <span id="job-badge" class="badge">空闲</span>
+    </header>
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+</body>
+</html>
